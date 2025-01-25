@@ -129,7 +129,10 @@ const CurrentOrder = ({ items, onClearCart, onRemoveItem, onUpdateQuantity }) =>
                     <span style={{ 
                       color: 'var(--primary-color)',
                       fontWeight: '600',
-                      fontSize: '1.1rem'
+                      fontSize: '1rem',
+                      '@media (min-width: 768px)': {
+                        fontSize: '1.1rem'
+                      }
                     }}>
                       RM{item.price * (item.quantity || 1)}
                     </span>
@@ -145,18 +148,28 @@ const CurrentOrder = ({ items, onClearCart, onRemoveItem, onUpdateQuantity }) =>
                       alignItems: 'center',
                       gap: '0.5rem'
                     }}>
-                      <button
-                        onClick={() => handleQuantityChange(item.id, (item.quantity || 1) - 1)}
-                        style={{
-                          padding: '0.25rem',
-                          border: 'none',
-                          background: 'none',
-                          color: 'var(--text-secondary)',
-                          cursor: 'pointer',
-                          opacity: (item.quantity || 1) <= 1 ? 0.5 : 1
-                        }}
-                        disabled={(item.quantity || 1) <= 1}
-                      >
+                        <button
+                          onClick={() => handleQuantityChange(item.id, (item.quantity || 1) - 1)}
+                          style={{
+                            padding: '0.5rem',
+                            border: 'none',
+                            background: 'none',
+                            color: 'var(--text-secondary)',
+                            cursor: 'pointer',
+                            opacity: (item.quantity || 1) <= 1 ? 0.5 : 1,
+                            minHeight: '44px',
+                            minWidth: '44px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            '@media (min-width: 768px)': {
+                              padding: '0.25rem',
+                              minHeight: '36px',
+                              minWidth: '36px'
+                            }
+                          }}
+                          disabled={(item.quantity || 1) <= 1}
+                        >
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <line x1="5" y1="12" x2="19" y2="12"></line>
                         </svg>
@@ -172,11 +185,21 @@ const CurrentOrder = ({ items, onClearCart, onRemoveItem, onUpdateQuantity }) =>
                       <button
                         onClick={() => handleQuantityChange(item.id, (item.quantity || 1) + 1)}
                         style={{
-                          padding: '0.25rem',
+                          padding: '0.5rem',
                           border: 'none',
                           background: 'none',
                           color: 'var(--text-secondary)',
-                          cursor: 'pointer'
+                          cursor: 'pointer',
+                          minHeight: '44px',
+                          minWidth: '44px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          '@media (min-width: 768px)': {
+                            padding: '0.25rem',
+                            minHeight: '36px',
+                            minWidth: '36px'
+                          }
                         }}
                       >
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -185,17 +208,27 @@ const CurrentOrder = ({ items, onClearCart, onRemoveItem, onUpdateQuantity }) =>
                         </svg>
                       </button>
                     </div>
-                    <button
-                      onClick={() => onRemoveItem(item.id)}
-                      style={{
-                        padding: '0.25rem',
-                        border: 'none',
-                        background: 'none',
-                        color: 'var(--danger-color)',
-                        cursor: 'pointer',
-                        opacity: 0.6,
-                        transition: 'all 0.2s ease'
-                      }}
+                      <button
+                        onClick={() => onRemoveItem(item.id)}
+                        style={{
+                          padding: '0.5rem',
+                          border: 'none',
+                          background: 'none',
+                          color: 'var(--danger-color)',
+                          cursor: 'pointer',
+                          opacity: 0.6,
+                          transition: 'all 0.2s ease',
+                          minHeight: '44px',
+                          minWidth: '44px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          '@media (min-width: 768px)': {
+                            padding: '0.25rem',
+                            minHeight: '36px',
+                            minWidth: '36px'
+                          }
+                        }}
                       onMouseEnter={e => e.currentTarget.style.opacity = '1'}
                       onMouseLeave={e => e.currentTarget.style.opacity = '0.6'}
                     >
