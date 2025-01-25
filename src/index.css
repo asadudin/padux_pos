@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2c3e50;
-  --success-color: #2ecc71;
-  --danger-color: #e74c3c;
+  --primary-color: #4A4A4A;
+  --secondary-color: #6B6B6B;
+  --success-color: #5C8D89;
+  --danger-color: #A65D57;
   --background-color: #f8f9fa;
-  --border-color: #e1e8ed;
-  --text-primary: #2c3e50;
-  --text-secondary: #6c757d;
+  --border-color: #E5E5E5;
+  --text-primary: #333333;
+  --text-secondary: #666666;
 }
 
 * {
@@ -41,12 +41,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: #BDBDBD;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: #9E9E9E;
 }
 
 /* Button Styles */
@@ -73,7 +73,7 @@ input {
 input:focus {
   outline: none;
   border-color: var(--primary-color) !important;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  box-shadow: 0 0 0 3px rgba(74, 74, 74, 0.1);
 }
 
 /* Typography */
@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.08);
   border-color: var(--primary-color);
 }
 
@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card .add-button:hover {
-  background-color: #27ae60;
+  background-color: #4D7A77;
   transform: translateY(-2px);
 }
 
@@ -157,16 +157,16 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   padding: 1rem;
   margin-bottom: 0.5rem;
-  background-color: #f8f9fa;
+  background-color: #fff;
   border-radius: 0.5rem;
   transition: all 0.2s ease;
-  border: 1px solid transparent;
+  border: 1px solid var(--border-color);
 }
 
 .cart-item:hover {
   transform: translateX(4px);
-  border-color: var(--border-color);
-  background-color: #fff;
+  border-color: var(--primary-color);
+  background-color: #fafafa;
 }
 
 /* Cart Scroll Area */
@@ -188,12 +188,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cart-items-container::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: #BDBDBD;
   border-radius: 3px;
 }
 
 .cart-items-container::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: #9E9E9E;
 }
 
 /* Clear Cart Button */
@@ -239,7 +239,7 @@ input[type="number"] {
 /* Button Hover Effects */
 button:not(:disabled):hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
 button:not(:disabled):active {
@@ -250,7 +250,7 @@ button:not(:disabled):active {
 /* Service Card Enhancements */
 .service-card:hover .add-button {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(46, 204, 113, 0.2);
+  box-shadow: 0 4px 8px rgba(92, 141, 137, 0.2);
 }
 
 .service-card .price-tag {
@@ -260,7 +260,7 @@ button:not(:disabled):active {
 
 .service-card:hover .price-tag {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+  box-shadow: 0 4px 8px rgba(74, 74, 74, 0.2);
 }
 
 /* Cart Item Enhancements */
